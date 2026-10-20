@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  AWS_REGION: ap-south-1
+  AWS_REGION: us-east-2
   ECR_REPOSITORY: todo-app-backend
   ECS_CLUSTER: todo-app-cluster
   ECS_SERVICE: todo-app-service
