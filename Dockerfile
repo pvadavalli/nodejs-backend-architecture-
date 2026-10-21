@@ -5,12 +5,12 @@ FROM node:alpine
 WORKDIR /app
 
 # Copy package files first for better caching
-COPY package*.json ./
+COPY package.json pnpm-lock.yaml ./
 
-RUN npm i -g pnpm
+RUN npm i -g pnpm@9.15.9
 
 # Install dependencies
-RUN pnpm install
+RUN pnpm install --frozen-lockfile
 
 # Copy application code
 COPY . .
